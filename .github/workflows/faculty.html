@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333333;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+        }
+        
+        .hero h2 {
+            color: #ffffff;
+            text-align: center;
+            padding-top: 150px;
+            font-size: 32px;
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .container p {
+            line-height: 1.5;
+        }
+        
+        footer {
+            background-color: #333333;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            background-color: #333333;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        .navbar {
+            background-color: #333333;
+            overflow: hidden;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .navbar a:hover {
+            background-color: #dddddd;
+            color: #333333;
+        }
+        
+        .navbar .icon {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {
+                display: none;
+            }
+            
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .navbar.responsive {
+                position: relative;
+            }
+            
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        
+        .faculty {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card:hover {
+            
+         box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+        .faculty .card {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .faculty .card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        
+        .faculty .card h3 {
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        @media screen and (max-width: 600px) {
+            .faculty .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // JavaScript for toggling the responsive navbar
+        function toggleNavbar() {
+            var navbar = document.getElementById("myNavbar");
+            if (navbar.className === "navbar") {
+                navbar.className += " responsive";
+            } else {
+                navbar.className = "navbar";
+            }
+        }
+    </script>
+    <header>
+        <h1>Anthropos Academy of Anthropology</h1>
+        <div class="navbar" id="myNavbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Corses.html">Courses</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="faculty">
+        <div class="card">
+            <img src="F1.jpg" alt="Faculty 1">
+            <h3><a href="https://reshihimayat7.wixsite.com/hashmathabib" target="_blank">Dr Hashmat Habib</a></h3>
+            <p>Assistant Professor</p>
+            <p>Specialization: Archaeology</p>
+        </div>
+        
+        <div class="card">
+            <img src="F2.png" alt="Faculty 2">
+            <h3>Dr Ubaid Manzoor</h3>
+            <p>Assistant Professor</p>
+            <p>Specialization: Cultural Anthropology</p>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+                
+        header {
+            background-color: #333333;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        .search-bar {
+            display: flex;
+            float: right;
+            align-items: center;
+            padding: 5px;
+        }
+        
+        .search-input {
+            width: 200px;
+            height: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .search-button {
+            margin-left: 10px;
+            padding: 8px 5px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .search-bar {
+                flex-direction: column;
+            }
+            
+            .search-button {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+
+        .navbar {
+            background-color: #333333;
+            overflow: hidden;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .navbar a:hover {
+            background-color: #dddddd;
+            color: #333333;
+        }
+        
+        .navbar .icon {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {
+                display: none;
+            }
+            
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .navbar.responsive {
+                position: relative;
+            }
+            
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        .courses-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        
+        .course-card {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .course-card h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .course-card p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666666;
+        }
+        
+        @media screen and (max-width: 900px) {
+            .courses-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .courses-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Anthropos Academy of Anthropology</h1>
+        <div class="navbar" id="myNavbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Corses.html">Courses</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </header>
+    <div class="courses-container">
+        <div class="course-card">
+            <h3>Anthropology</h3>
+            <p>An in-depth study of human societies, cultures, and behaviors, exploring topics such as social structures, rituals, kinship, and more.</p>
+            <h3 style="text-decoration: line-through;">4000/=</h3>
+            <h3>3500/=</h3>
+        </div>
+        
+        <div class="course-card">
+            <h3>Archaeology</h3>
+            <p>Uncover the mysteries of the past through the examination of artifacts, excavation techniques, and the interpretation of ancient civilizations.</p>
+        </div>
+        
+        <div class="course-card">
+            <h3>Cultural Studies</h3>
+            <p>Explore the rich diversity of cultures worldwide, examining their traditions, customs, beliefs, and the impact of globalization.</p>
+        </div>
+        
+        <div class="course-card">
+            <h3>Linguistics</h3>
+            <p>Study language as a cultural phenomenon, investigating its structure, evolution, variation, and the role it plays in communication and identity.</p>
+        </div>
+        
+        <div class="course-card">
+            <h3>Human Evolution</h3>
+            <p>Trace the origins and development of human beings, exploring the biological, genetic, and behavioral aspects of our evolutionary history.</p>
+        </div>
+        
+        <div class="course-card">
+            <h3>Visual Anthropology</h3>
+            <p>Learn how to use visual media, including photography and film, as tools for documenting and understanding diverse cultures and societies.</p>
+        </div>
+    </div>
+</body>
+</html>

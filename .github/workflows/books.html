@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333333;
+            padding: 50px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #dddddd;
+            color: #333333;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {
+                display: none;
+            }
+
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar.responsive {
+                position: relative;
+            }
+
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        .search-bar {
+            display: flex;
+            float: right;
+            align-items: center;
+            padding: 5px;
+        }
+        
+        .search-input {
+            width: 200px;
+            height: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .search-button {
+            margin-left: 10px;
+            padding: 8px 5px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .search-bar {
+                flex-direction: column;
+            }
+            
+            .search-button {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        } 
+        .container {
+            max-width: 400px;
+            margin: 5% auto;
+            padding: 20px;
+        }
+        
+        .ebook-card {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .ebook-card h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .ebook-card p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666666;
+        }
+        
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .download-button:hover {
+            background-color: #ffcc00;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .ebook-card {
+                padding: 10px;
+            }
+            
+            .download-button {
+                margin-top: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Anthropos Academy of Anthropology</h1>
+        <div class="navbar" id="myNavbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Corses.html">Courses</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="contact.html">Contact</a>
+            <a href="books.html">PDF Books</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="ebook-card">
+            <h2>Download Ebook</h2>
+        </div>
+        
+        <div class="ebook-card">
+            <h2>Anthropology Basics</h2>
+            <p>A beginner's guide to anthropology. Learn about the key concepts, methods, and theories in the field.</p>
+            
+            <a href="https://drive.google.com/file/d/1DyP_0EadHrHVIzeNXZwNuF9dqLTWXABv/view?usp=share_link" target="_blank" class="download-button">Download Now</a>
+        </div>
+        
+        <div class="ebook-card">
+            <h2>Cultural Anthropology</h2>
+            <p>Explore the diverse cultures and customs around the world. Uncover the intricacies of human societies.</p>
+            <a href="#" class="download-button">Download Now</a>
+        </div>
+    </div>
+</body>
+</html>
